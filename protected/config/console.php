@@ -1,0 +1,69 @@
+<?php
+
+// This is the configuration for yiic console application.
+// Any writable CConsoleApplication properties can be configured here.
+return array(
+	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+	'name'=>'My Console Application',
+
+	// preloading 'log' component
+	'preload'=>array('log'),
+	
+	'modules'=>array(
+        #...
+        'user'=>array(
+            # encrypting method (php hash function)
+            'hash' => 'sha1',
+ 
+            # send activation email
+            'sendActivationMail' => true,
+ 
+            # allow access for non-activated users
+            'loginNotActiv' => false,
+ 
+            # activate user on registration (only sendActivationMail = false)
+            'activeAfterRegister' => false,
+ 
+            # automatically login from registration
+            'autoLogin' => true,
+ 
+            # registration path
+            'registrationUrl' => array('/user/registration'),
+ 
+            # recovery password path
+            'recoveryUrl' => array('/user/recovery'),
+ 
+            # login form path
+            'loginUrl' => array('/user/login'),
+ 
+            # page after login
+            'returnUrl' => array('/'),
+ 
+            # page after logout
+            'returnLogoutUrl' => array('/'),
+        ),
+        'aset',
+        'blog',
+    ),
+    
+	// application components
+	'components'=>array(
+		'db' => array(	    			
+			'connectionString' => 'pgsql:host=localhost;port=5432;dbname=bmn',
+			'emulatePrepare' => true,
+			'username' => 'roy',
+			'password' => 'bukapeta',
+			'charset' => 'utf8',
+			'tablePrefix' => 'simak_',
+			),
+		'log'=>array(
+			'class'=>'CLogRouter',
+			'routes'=>array(
+				array(
+					'class'=>'CFileLogRoute',
+					'levels'=>'error, warning',
+				),
+			),
+		),
+	),
+);

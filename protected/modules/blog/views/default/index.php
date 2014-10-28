@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><a href="" class="logo"></a></center>
+<br>
+<center><form class="navbar-search" style="margin-left: 34%;" action=""><input type="text" class="search-query" style="width: 200%;" placeholder="Cari Barang Milik Negara"></form></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
